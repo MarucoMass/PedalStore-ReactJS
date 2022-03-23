@@ -61,8 +61,11 @@
 .App-header-lista li{
   list-style: none;
   padding: 0 12px;
+}
+.App-header-lista li a{
   color: rgba(0, 0, 0, 0.6);
   font-weight: 600;
+  text-decoration: none;
 }
 
 .App-link {

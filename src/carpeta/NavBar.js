@@ -8,11 +8,11 @@ function App() {
               <div className='App-header-title'><h1><span>Pedal</span>Store</h1></div>
             
               <ul className='App-header-lista'>
-                <li>Distorsiones</li>
-                <li>Modulaciones</li>
-                <li>Delays & Reverbs</li>
-                <li>EQs</li>
-                <li>Compresores</li>
+                <li><a href='#'>Distorsiones</a></li>
+                <li><a href='#'>Modulaciones</a></li>
+                <li><a href='#'>Delays & Reverbs</a></li>
+                <li><a href='#'>EQs</a></li>
+                <li><a href='#'>Compresores</a></li>
               </ul>
           </div>
       </header>
