@@ -1,68 +1,67 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Ruda:wght@400;500;600;700;800;900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Ruda:wght@400;500;600;700;800;900&display=swap');
 /* @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap'); */
 
 *{
-  /* font-family: 'Ruda', sans-serif; */
+  font-family: 'Ruda', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   /* font-family: 'Rubik Mono One', sans-serif; */
-  font-family: 'Krona One', sans-serif;
+  /* font-family: 'Krona One', sans-serif; */
 }
 
 .App {
   text-align: center;
-  /* background: linear-gradient(#DF98FA, #9055FF); */
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
   width: 100%;
-  /* background: linear-gradient(#DF98FA, #9055FF); */
-  /* background-color: rgba(0, 0, 0, 0.8); */
   background-color: rgba(240, 240, 240, 0.8);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-  min-height: 10vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.App-header-container {
-  width: 100%;
-  max-width: 1000px;
+  min-height: 12vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.App-header-title {
-  font-size: calc(10px + 1vmin);
-  color: white;
-  text-transform: uppercase;
-  text-shadow: 2px 1px 3px rgba(0, 0, 0, 0.5);
+.App-header-contenedor {
+  margin-left: 15px;
+  max-width: 1000px;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
 }
-.App-header-title span{
+.App-header-logo{
+  width: 25px;
+  height: 25px;
+}
+.App-header-title {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: calc(10px + 3vmin);
+}
+.App-header-title a {
+  color: black;
+  text-decoration: none;
+}
+.App-header-title a span{
   color: rgb(209, 9, 9);
-  text-shadow: none;
-  text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.2);
+  margin-right: 5px;
 }
 .App-header-lista {
   display: flex;
   align-items: center;
-  font-size: calc(10px + 0.5vmin);
+  /* justify-content: center; */
+  margin-left: 30px;
+  /* margin-top: 15px; */
 }
 .App-header-lista li{
   list-style: none;
-  padding: 0 12px;
+  /* padding: 0 10px; */
+  padding-right: 20px;
 }
 .App-header-lista li a{
+  font-size: calc(10px + 1vmin);
   color: rgba(0, 0, 0, 0.6);
   font-weight: 600;
   text-decoration: none;
@@ -72,16 +71,76 @@
   color: rgb(209, 12, 12);
   transition: 0.3s;
 }
-
-.App-link {
-  color: #61dafb;
+ .BoxSubmenu{
+  position: relative;
+}
+.BoxSubmenu:hover .App-header-submenu{
+  display: block;
+}
+.App-header-submenu{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  position: absolute;
+  top: 20px;
+  left: -30px;
+  border-radius: 5px;
+  background-color: rgba(240, 240, 240, 0.9);
+  display: none;
+}
+.App-header-submenu li{
+  padding: 15px;
+}
+.App-header-submenu:hover{
+  display: block;
+}
+.active{
+  color: rgb(209, 12, 12);
+}
+.CartWidget-Box{
+  /* width: 250px; */
+  position: relative;
+  display: flex;
+  /* justify-content: space-around; */
+  align-items: center;
+}
+.CartWidget-Box span{
+  font-size: calc(10px + 1vmin);
+  /* padding: 0 15px; */
+  margin-right: 15px;
+  font-weight: 600;
+}
+.CartWidget-Box span:hover{
+  color: rgb(209, 12, 12);
+  transition: 0.3s;
+  cursor: pointer;
+}
+.img-Box{
+  position: relative;
+}
+.carrito{
+  width: 25px;
+  height: 25px;
+  margin-right: 35px;
+  transition: 0.3s;
+}
+.carrito:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
+  transition: 0.3s;
+}
+.number{
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  background-color: rgb(209, 12, 12);
+  color: white;
+  border-radius: 50%;
+  padding:1px;
+  position: absolute;
+  top: -5px;
+  right: 25px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
