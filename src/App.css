@@ -23,6 +23,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 .App-header-contenedor {
   margin-left: 15px;
@@ -46,7 +47,43 @@
 }
 .App-header-title a span{
   color: rgb(209, 9, 9);
-  margin-right: 5px;
+  margin-right: 3px;
+}
+.navBurguer{
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid black;
+  display: none;
+  cursor: pointer;
+}
+.burguer{
+  width: 15px;
+  height: 2px;
+  background-color: black;
+  position: relative;
+  /* display: none; */
+}
+.burguer::after,
+.burguer::before{
+content: '';
+position: absolute;
+height: 100%;
+width: 100%;
+left: 0;
+background-color: black;
+transition: 0.5s ease;
+transition-property: top, bottom;
+}
+.burguer::after{
+top: 7px;
+}
+.burguer::before{
+bottom: 7px;
 }
 .App-header-lista {
   display: flex;
@@ -67,7 +104,7 @@
   text-decoration: none;
   transition: 0.3s;
 }
-.App-header-lista li a:hover{
+.App-header-lista li a:hover, .App-header-lista li a:focus{
   color: rgb(209, 12, 12);
   transition: 0.3s;
 }
@@ -84,20 +121,25 @@
   justify-content: center;
   padding: 0;
   position: absolute;
-  top: 20px;
+  top: 25px;
   left: -30px;
   border-radius: 5px;
-  background-color: rgba(240, 240, 240, 0.9);
+  background-color: white;
+  border: 2px solid rgba(240, 240, 240, 0.9);
   display: none;
 }
 .App-header-submenu li{
-  padding: 15px;
+  padding: 15px 10px;
+}
+.App-header-submenu li:hover {
+  background-color: rgba(240, 240, 240, 0.8);
+  color: rgb(209, 12, 12);
+}
+.App-header-submenu li:hover a{
+  color: rgb(209, 12, 12);
 }
 .App-header-submenu:hover{
   display: block;
-}
-.active{
-  color: rgb(209, 12, 12);
 }
 .CartWidget-Box{
   /* width: 250px; */
@@ -109,7 +151,7 @@
 .CartWidget-Box span{
   font-size: calc(10px + 1vmin);
   /* padding: 0 15px; */
-  margin-right: 15px;
+  margin-right: 7px;
   font-weight: 600;
 }
 .CartWidget-Box span:hover{
@@ -144,3 +186,14 @@
   right: 25px;
 }
 
+/* @media (max-width: 1000px){
+  .navBurguer{
+    display: block;
+  }
+  .burguer{
+    display: block;
+  }
+  .App-header-lista{
+    display: none;
+  }
+} */
