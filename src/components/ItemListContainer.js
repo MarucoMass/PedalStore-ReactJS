@@ -1,7 +1,9 @@
+import ItemCount from './ItemCount';
 const ItemListContainer = (props) => {
     return(
         <>
-            <p>{props.parrafo}</p>
+            <p>{props.greeting}</p>
+            <ItemCount />
         </>
     );
 }

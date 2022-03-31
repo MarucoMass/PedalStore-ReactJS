@@ -11,7 +11,7 @@
   /* font-family: 'Krona One', sans-serif; */
 }
 
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -30,7 +30,6 @@
   max-width: 1000px;
   display: flex;
   align-items: center;
-  /* justify-content: center; */
 }
 .App-header-logo{
   width: 25px;
@@ -39,8 +38,9 @@
 .App-header-title {
   text-transform: uppercase;
   font-weight: 800;
-  font-size: calc(10px + 3vmin);
+  font-size: calc(10px + 2.5vmin);
 }
+
 .App-header-title a {
   color: black;
   text-decoration: none;
@@ -66,7 +66,6 @@
   height: 2px;
   background-color: black;
   position: relative;
-  /* display: none; */
 }
 .burguer::after,
 .burguer::before{
@@ -88,13 +87,10 @@ bottom: 7px;
 .App-header-lista {
   display: flex;
   align-items: center;
-  /* justify-content: center; */
   margin-left: 30px;
-  /* margin-top: 15px; */
 }
 .App-header-lista li{
   list-style: none;
-  /* padding: 0 10px; */
   padding-right: 20px;
 }
 .App-header-lista li a{
@@ -111,9 +107,6 @@ bottom: 7px;
  .BoxSubmenu{
   position: relative;
 }
-.BoxSubmenu:hover .App-header-submenu{
-  display: block;
-}
 .App-header-submenu{
   display: flex;
   flex-direction: column;
@@ -121,7 +114,7 @@ bottom: 7px;
   justify-content: center;
   padding: 0;
   position: absolute;
-  top: 23px;
+  top: 20px;
   left: -30px;
   border-radius: 5px;
   background-color: white;
@@ -141,16 +134,17 @@ bottom: 7px;
 .App-header-submenu:hover{
   display: block;
 }
+.BoxSubmenu:hover .App-header-submenu{
+  display: block;
+}
 .CartWidget-Box{
-  /* width: 250px; */
   position: relative;
   display: flex;
-  /* justify-content: space-around; */
   align-items: center;
+  margin-right: 10px;
 }
 .CartWidget-Box span{
   font-size: calc(10px + 1vmin);
-  /* padding: 0 15px; */
   margin-right: 7px;
   font-weight: 600;
 }
@@ -184,16 +178,144 @@ bottom: 7px;
   position: absolute;
   top: -5px;
   right: 25px;
-}
-
-/* @media (max-width: 1000px){
-  .navBurguer{
-    display: block;
-  }
-  .burguer{
-    display: block;
-  }
-  .App-header-lista{
-    display: none;
-  }
 } */
+
+/* Bootstrap section */
+
+.Header{
+  background-color: rgba(240, 240, 240, 0.8);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+.Header-content{
+  position: relative;
+  padding: 10px ;
+  /* min-height: 10vh; */
+
+}
+.Header-brand {
+  color: black;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: calc(10px + 2.5vmin);
+  text-decoration: none;
+  margin-right: 10px;
+}.Header-brand:hover{
+  color: black;
+}
+.Header-brand span{
+  color: rgb(209, 9, 9);
+  margin-right: 3px;
+}
+.Header-brand img{
+  margin: 0;
+  margin-bottom: 7px;
+}
+.Header-ul{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.Header-options{
+  font-size: calc(10px + 1vmin);
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+  margin: 0 10px;
+}
+.Header-options:hover, .Header-options:focus{
+  color: rgb(209, 9, 9);
+}
+.dropdown-menu{
+  transition: 0.5s;
+}
+.dropdown-item{
+  font-size: calc(10px + 1vmin);
+}
+.dropdown-item:hover{
+  color: rgb(209, 9, 9);
+}
+.navbar-toggler{
+  width: 35px;
+  height: 35px;
+  border: none;
+  color: black;
+  border-color: black;
+  border: 3px solid;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0;
+}
+.navbar-toggler-icon{
+  color: black;
+}
+.CartWidget-Box{
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  top: 30px;
+  display: flex;
+  align-items: center;
+  /* flex-wrap: wrap; */
+}
+.CartWidget-Box span{
+  font-size: calc(10px + 1vmin);
+  margin: 0;
+  padding: 0 3px;
+  font-weight: 600;
+}
+.CartWidget-Box span:hover{
+  color: rgb(209, 12, 12);
+  transition: 0.3s;
+  cursor: pointer;
+}
+.img-Box{
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  margin-bottom: 10px;
+}
+.carrito{
+  margin: 0;
+  object-fit: cover;
+  transition: 0.3s;
+}
+.carrito:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.number{
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  background-color: rgb(209, 12, 12);
+  color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  font-size: 0.7rem;
+}
+/* End Bootstrap section */
+.ItemCountBox{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 300px;
+  margin: 0 auto;
+}
+.ItemCountBox button{
+  padding: 5px 10px;
+}
+.ItemCountBox p{
+  font-size: calc(10px + 2vmin);
+  margin: 0;
+}
