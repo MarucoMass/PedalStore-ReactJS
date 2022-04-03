@@ -1,5 +1,5 @@
 import CartWidget from './CartWidget';
-import Logo from './img/pedal-svgrepo-com.svg';
+import Logo from '../img/pedal-svgrepo-com.svg';
 const NavBar = () => {
   return (
     // <header className='App-header'>
@@ -66,6 +66,14 @@ const NavBar = () => {
                  <li><a className="dropdown-item" href="#">Multiefectos</a></li>
                </ul>
              </li>
+                  <div className="Header-user">
+                    <li className="nav-item">
+                      <a className="Header-options" href="#">Register</a>
+                    </li>
+                    <li className="nav-item">
+                      <a className="Header-options" href="#">Sign In</a>
+                    </li>
+                  </div>
            </ul>
          </div>
            <CartWidget />
