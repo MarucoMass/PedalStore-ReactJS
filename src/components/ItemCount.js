@@ -1,8 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function ItemCount ({stock, initial, onAdd})  {
 
     const [count, setCount] = useState(initial);
+
+    useEffect(() => {
+        setCount(initial)
+    }, [initial])
 
     const increment = () => {
         if (count < stock) {
@@ -10,15 +14,15 @@ function ItemCount ({stock, initial, onAdd})  {
         } 
     }
     const decrement = () => {
-        if (count > 1) {
+        if (count > initial) {
             setCount(count-1);
         } 
     }
 
-    function addToCart(){
+    function addToCart () {
         onAdd(count)
     }
-
+    
     return(
         <>
         <div className="ItemCountBox">

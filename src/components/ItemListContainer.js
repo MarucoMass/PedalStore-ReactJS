@@ -7,23 +7,28 @@ const ItemListContainer = () => {
 
     const [products, setProducts] = useState([]);
 
-    useEffect(() => {
-        getData()
-        .then(function(products) {
-            console.log(products)
+    // useEffect(() => {
+    //     getData()
+    //     .then(function(products) {
+    //         console.log(products)
 
-            setProducts(products);
-        });
-    }, []);
+    //         setProducts(products);
+    //     });
+    // }, []);
     
-    // function onAddItem(itemCount){
-    //     alert(itemCount);
-    // }
-    
+
+    useEffect(() => {
+        //Obtenemos los productos con una promesa
+        async function fetchData() {
+            let data = await getData();
+            setProducts(data);
+            }
+        fetchData();
+        }, []);
+
     return(
         <>
-            { products.length > 0 ? <ItemList products={products} /> : <p>Cargando...</p>}
-            {/* <ItemCount stock={5} initial={1} onAdd={onAddItem}/> */}
+            { products.length > 0 ? <ItemList products={products} /> : <p>Cargando productos...</p>}
         </>
     );
 }

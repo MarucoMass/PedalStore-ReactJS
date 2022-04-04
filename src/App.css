@@ -317,15 +317,31 @@ bottom: 7px;
 /*Fin CartWidget */
 /* End Bootstrap section */
 
+
+/* ItemList */
+.ItemList-Box{
+  width: 100%;
+  display:grid;
+  gap: 2px;
+  grid-auto-rows: 25rem;
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  /* width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  flex-wrap: wrap; */
+}
+/* Fin ItemList */
+
 /* Item Count */
 .ItemCountBox{
   display: flex;
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
-  width: 290px;
+  width: 220px;
   margin: 10px auto;
-  z-index: 2;
   /* background-color: aqua; */
 }
 /* .ItemCountBox button{
@@ -377,7 +393,7 @@ bottom: 7px;
 }
 .ItemCount-Add{
   width: 100%;
-  padding: 5px 0;
+  padding: 5px 10px;
   margin-top: 7px;
   background-color: rgb(69, 69, 238);
   border: none;
@@ -388,16 +404,6 @@ bottom: 7px;
 }
 /* Fin ItemCount */
 
-/* ItemList */
-.ItemList-Box{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-/* Fin ItemList */
-
 /* Item */
 .Item-contain{
   display: flex;
@@ -406,8 +412,8 @@ bottom: 7px;
   justify-content: center;
 }
 .Item-Box{
-  width: 290px;
-  height: 290px;
+  width: 220px;
+  height: 220px;
   margin: 20px;
   padding: 10px;
   position: relative;
@@ -431,6 +437,7 @@ bottom: 7px;
   color: white;
   text-shadow: 1px 1px 1px black;
   z-index: 2;
+  font-size: 0.9rem;
 }
 .Item-Dark{
   width: 100%;

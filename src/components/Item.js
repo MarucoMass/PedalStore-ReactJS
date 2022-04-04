@@ -2,13 +2,13 @@ import ItemCount from './ItemCount';
 export default function Item({ item }){
 
     function onAddItem(ItemCount){
-        alert(ItemCount);
+        alert(`Lleva ${ItemCount} ${item.title}`);
     }
 
     return (
        <>
        <div className='Item-contain'>
-            <div className="Item-Box">
+            <div className="Item-Box" key={item.id}>
             <img src={item.img} className="Item-img" alt="imágen del producto" />
                 <div className="Item-BoxText">
                     <p className="Item-BoxText-title">{item.title}</p>
