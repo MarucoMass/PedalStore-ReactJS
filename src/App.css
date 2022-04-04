@@ -457,6 +457,9 @@ bottom: 7px;
   transition: all 0.8s;
   transform: translateY(0);
 }
+.Item-stock{
+  font-weight: 700;
+}
 /*Fin Item */
 
 @media (max-width: 992px){
