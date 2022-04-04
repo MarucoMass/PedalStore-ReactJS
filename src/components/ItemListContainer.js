@@ -7,25 +7,26 @@ const ItemListContainer = () => {
 
     const [products, setProducts] = useState([]);
 
+    // Forma de hacerlo con async await
     // useEffect(() => {
-    //     getData()
-    //     .then(function(products) {
-    //         console.log(products)
+    //     async function fetchData() {
+    //         let data = await getData();
+    //         setProducts(data);
+    //         }
+    //     fetchData();
+    //     }, []);
 
-    //         setProducts(products);
-    //     });
-    // }, []);
+    // Forma de hacerlo con .then
+    useEffect(() => {
+        getData()
+        .then(function(products) {
+
+            setProducts(products);
+        });
+    }, []);
     
 
-    useEffect(() => {
-        //Obtenemos los productos con una promesa
-        async function fetchData() {
-            let data = await getData();
-            setProducts(data);
-            }
-        fetchData();
-        }, []);
-
+    
     return(
         <>
             { products.length > 0 ? <ItemList products={products} /> : <p>Cargando productos...</p>}
@@ -34,15 +35,3 @@ const ItemListContainer = () => {
 }
 
 export default ItemListContainer;
-// const [ pedales, setPedales ] = useState([]);
-
-// useEffect(() => {
-//     async function datosPedales() {
-//         const pedirPedales = await getData();
-//         setPedales(pedirPedales) 
-//     }
-//         // setTimeout(() => {
-//             datosPedales()
-//         // }, 2000);
-
-//     }, [])
