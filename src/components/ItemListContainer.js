@@ -16,14 +16,14 @@ const ItemListContainer = () => {
         });
     }, []);
     
-    function onAddItem(itemCount){
-        alert(itemCount);
-    }
+    // function onAddItem(itemCount){
+    //     alert(itemCount);
+    // }
     
     return(
         <>
             { products.length > 0 ? <ItemList products={products} /> : <p>Cargando...</p>}
-            <ItemCount stock={5} initial={1} onAdd={onAddItem}/>
+            {/* <ItemCount stock={5} initial={1} onAdd={onAddItem}/> */}
         </>
     );
 }

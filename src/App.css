@@ -322,15 +322,69 @@ bottom: 7px;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 300px;
-  margin: 0 auto;
+  flex-direction: column;
+  width: 290px;
+  margin: 10px auto;
+  z-index: 2;
+  /* background-color: aqua; */
 }
-.ItemCountBox button{
-  padding: 5px 10px;
+/* .ItemCountBox button{
+  background-color: none;
+  padding: 2px 15px;
+  font-size: 1rem;
+} */
+.ItemCountBtns{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: none;
+  padding: 2px 0px;
+  font-size: 1rem;
+}
+.ItemCountBtns button{
+  background-color: transparent;
+  /* padding: 0px 10px; */
+  width: 40px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.ItemCountBtns-decrement{
+  border: 2px solid red;
+  color: red;
+  transition: 0.3s;
+}
+.ItemCountBtns-decrement:hover{
+  border: 2px solid white;
+  color: white;
+  background-color: red;
+  transition: 0.3s;
+}
+.ItemCountBtns-increment{
+  border: 2px solid green;
+  color: green;
+  transition: 0.3s;
+}
+.ItemCountBtns-increment:hover{
+  border: 2px solid white;
+  color: white;
+  background-color: green;
+  transition: 0.3s;
 }
 .ItemCountBox p{
   font-size: calc(10px + 2vmin);
   margin: 0;
+}
+.ItemCount-Add{
+  width: 100%;
+  padding: 5px 0;
+  margin-top: 7px;
+  background-color: rgb(69, 69, 238);
+  border: none;
+  color: white;
+  font-weight: 600;
+}.ItemCount-Add:hover{
+  background-color: rgb(6, 6, 224);
 }
 /* Fin ItemCount */
 
@@ -345,6 +399,12 @@ bottom: 7px;
 /* Fin ItemList */
 
 /* Item */
+.Item-contain{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .Item-Box{
   width: 290px;
   height: 290px;

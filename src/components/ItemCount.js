@@ -22,10 +22,12 @@ function ItemCount ({stock, initial, onAdd})  {
     return(
         <>
         <div className="ItemCountBox">
-            <button onClick={decrement}>-</button>
-            <p>{count}</p>
-            <button onClick={increment}>+</button>
-            <button onClick={addToCart}>Agregar al carrito</button>
+            <div className="ItemCountBtns">
+                <button className="ItemCountBtns-decrement" onClick={decrement}>-</button>
+                <p>{count}</p>
+                <button className="ItemCountBtns-increment" onClick={increment}>+</button>
+            </div>
+            <button className="ItemCount-Add" onClick={addToCart}>Agregar al carrito</button>
         </div>
         </>
     );
