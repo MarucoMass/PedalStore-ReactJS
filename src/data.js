@@ -50,3 +50,6 @@ export const getData = () => {
         }, 2000);
     })
 }
+// module.exports = {
+//     data,
+//   }

@@ -366,14 +366,14 @@ bottom: 7px;
   font-weight: 700;
 }
 .ItemCountBtns-decrement{
-  border: 2px solid red;
-  color: red;
+  border: 2px solid rgb(209, 9, 9);;
+  color: rgb(209, 9, 9);
   transition: 0.3s;
 }
 .ItemCountBtns-decrement:hover{
   border: 2px solid white;
   color: white;
-  background-color: red;
+  background-color:  rgb(209, 9, 9);;
   transition: 0.3s;
 }
 .ItemCountBtns-increment{
@@ -397,10 +397,16 @@ bottom: 7px;
   margin-top: 7px;
   background-color: rgb(69, 69, 238);
   border: none;
+  /* background-color: transparent; */
+  border: 2px solid rgb(6, 6, 224);
+  /* color: rgb(6, 6, 224); */
   color: white;
   font-weight: 600;
+  transition: 0.3s;
 }.ItemCount-Add:hover{
+  color: white;
   background-color: rgb(6, 6, 224);
+  transition: 0.3s;
 }
 /* Fin ItemCount */
 
@@ -480,6 +486,63 @@ bottom: 7px;
 }
 /*Fin Item */
 
+/* ItemDetail */
+/* ////////////////////// */
+.CardDetail{
+  max-width: 700px;
+  margin: 0 auto;
+  box-shadow: -8px -8px 25px rgba(240, 240, 240, 0.8),
+                5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+.CardColumn{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.CardColumn img{
+width: 200px;
+height: auto;
+}
+
+/* /////////////////// */
+.ItemDetail-contain{
+  /* width: 300px; */
+  /* height: auto; */
+  /* margin: 0px auto; */
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  /* border: 1px solid black; */
+  
+}
+.ItemDetail-img{
+  width: 200px;
+  height: auto;
+  margin: 20px;
+}
+.ItemDetail-img img{
+  display: block;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* transform: rotate(10deg); */
+}
+.ItemDetail-text{
+  /* width: 500px; */
+  width: 500px;
+  padding: 20px;
+  background-color: rgba(240, 240, 240, 0.8);
+}
+.ItemDetail-text h3{
+  font-size: calc(10px + 1.8vmin);
+}
+.ItemDetail-text p{
+  font-size: calc(10px + .8vmin);
+}
+/* Fin ItemDetail */
 @media (max-width: 992px){
   .navbar{
     padding-bottom: 1rem;
