@@ -1,45 +1,39 @@
-import ItemDetail from './ItemDetail.js';
+import getItem from '../util/getItem';
 import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import ItemDetail from './ItemDetail.js';
 const {dataProducts} = require('../util/dataProducts');
 // import { getProducts } from '../util/dataProducts.js';
 
-// FORMA DE HACERLO QUE VIMOS EN CLASE
-let validation = true;
-const getItem = ( data ) => {
-    return new Promise((resolve, reject) => {
-        if (validation) {
-            setTimeout(() => {
-            resolve(data);
-            }, 2000);
-        } else {
-            reject('Hubo un error');
-        }
-    })
-}
+
 const ItemDetailContainer = () => {
-
+    
     const [products, setProducts] = useState({});
-
-
+    const { idItem } = useParams();
+    
+    
+    // FORMA DE HACERLO QUE VIMOS EN CLASE
     useEffect(() => {
-        getItem( dataProducts[0] )
+        getItem( dataProducts.find(el => el.id === parseInt(idItem)) )
         .then(result => setProducts(result))
+        // .then(result => console.log(result))
         .catch(err => console.log(err))
     }, [])
 
     
-    // FORMA DE HACERLO CON THEN
+    // FORMA DE HACERLO CON THEN LLAMANDO EL PROMISE DIRECTAMENTE DESDE EL JS DE PRODUCTOS
     // useEffect(() => {
-        //     getProducts()
-        //         .then(result => setProducts(result))
-        //         .catch(err => console.log(err))
-        
-        //     // .then(function(products) {
+    //         getProducts() 
+    //             .then(result => setProducts(result.find(el => el.id === parseInt(idItem))))
+    //             .catch(err => console.log(err))
+
+                // ESTO NO VA
+    //         // .then(function(products) {
             
-            //     //     setProducts(products[0]);
-            //     // });
+    //             //     setProducts(products);
+    //             // });
             
-            // }, []);
+    //         }, []);
             
         // FORMA DE HACERLO CON ASYNC AWAIT
         // useEffect(() => {
@@ -51,9 +45,10 @@ const ItemDetailContainer = () => {
         //     }, [])
 
     return(
-        <>
+        <div className='ItemDetailContainer-Box'>
             <ItemDetail item={products} />
-        </>
+        </div>
+        
     );
 }
 

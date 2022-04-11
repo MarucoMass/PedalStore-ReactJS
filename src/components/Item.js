@@ -1,25 +1,20 @@
 // import ItemCount from './ItemCount';
-export default function Item({ item }){
-
-    function onAddItem(ItemCount){
-        alert(`Lleva ${ItemCount} ${item.title}`);
-    }
+import { Link } from "react-router-dom";
+const Item = ({ id, img, title, price }) => {
 
     return (
-       <>
-       <div className='Item-contain'>
-            <div className="Item-Box" key={item.id}>
-            <img src={item.img} className="Item-img" alt="imágen del producto" />
+
+             <div className="Item-Box" key={id}>
+                <div className="Item-img"><img src={img} alt="Imágen del producto" /></div>
                 <div className="Item-BoxText">
-                    <p className="Item-BoxText-title">{item.title}</p>
-                    <p className="Item-BoxText-price">Precio: ${item.price}</p>
-                    <p className="Item-BoxText-price">+ Info</p>
-                    {/* <p className="Item-stock">Stock: {item.stock}</p> */}
+                    <p className="Item-BoxText-title">{title}</p>
+                    <p className="Item-BoxText-price">Precio: ${price}</p>
+                    <Link to={`/item/${id}`} className="Item-BoxText-info">+ Info</Link>
                 </div>
                 <div className="Item-Dark"></div>
             </div>
-                {/* <ItemCount stock={item.stock} initial={1} onAdd={onAddItem}/> */}
-        </div>
-       </>
+
     );
 };
+
+export default Item;

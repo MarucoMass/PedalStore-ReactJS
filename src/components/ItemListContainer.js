@@ -1,33 +1,31 @@
 import React from 'react';
+import getItem from '../util/getItem';
 import ItemList from './ItemList';
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 // import { getProducts } from '../util/dataProducts.js';
 const {dataProducts} = require('../util/dataProducts');
 
 
-let validation = true;
-const getAllProducts = ( data ) => {
-    return new Promise((resolve, reject) => {
-        if (validation) {
-            setTimeout(() => {
-            resolve(data);
-            }, 2000);
-        } else {
-            reject('Hubo un error');
-        }
-    })
-}
 const ItemListContainer = () => {
 
     const [products, setProducts] = useState([]);
+    const { idCategory } = useParams();
 
+    // FORMA DE HACERLO COMO VIMOS EN CLASE
     useEffect(() => {
-        getAllProducts( dataProducts )
-        .then(result => setProducts(result))
-        .catch(err => console.log(err))
-    }, [])
+        if (idCategory === undefined) {
+            getItem( dataProducts )
+            .then(result => setProducts(result))
+            .catch(err => console.log(err))  
+        } else {
+            getItem( dataProducts.filter(el => el.categoryId === parseInt(idCategory)) )
+            .then(result => setProducts(result))
+            .catch(err => console.log(err))  
+        }
+    }, [idCategory])
 
-    // Forma de hacerlo con async await
+    // FORMA DE HACERLO CON ASYNC AWAIT
     // useEffect(() => {
     //     async function fetchData() {
     //         let data = await getProducts();
@@ -36,21 +34,41 @@ const ItemListContainer = () => {
     //     fetchData();
     //     }, []);
 
-    // Forma de hacerlo con .then
+    // FORMA DE HACERLO CON THEN LLAMANDO EL PROMISE DIRECTAMENTE DESDE EL JS DE PRODUCTOS
     // useEffect(() => {
-    //     getData()
-    //     .then(function(products) {
+    //     getProducts()
+    //     if (idCategory === undefined) {
+    //         getItem()
+    //             .then(result => setProducts(result))
+    //             .catch(err => console.log(err))  
+    //     } else {
+    //         getItem()
+    //             .then(result => setProducts(result.filter(el => el.categoryId === parseInt(idCategory))))
+    //             .catch(err => console.log(err))  
+    //             }
+            // ESTO NO VA
+    //     // .then(function(products) {
 
-    //         setProducts(products);
-    //     });
-    // }, []);
+    //     //     setProducts(products);
+    //     // });
+    // }, [idCategory]);
     
 
     
     return(
-        <>
-            { products.length > 0 ? <ItemList products={products} /> : <p>Cargando productos...</p>}
-        </>
+        <div className='ItemListContainer-Box'>
+        {/* <ItemList products={products} /> */}
+            { products.length > 0 ? 
+                
+                <ItemList products={products} /> 
+
+                                : <div className='loadContain'>
+                                    <p>Cargando productos...</p>    
+                                    <div className='loadBox'>
+                                        <div className='loadCharge'></div>
+                                    </div>
+                                </div>}
+        </div>
     );
 }
 

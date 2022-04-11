@@ -1,5 +1,6 @@
 import CartWidget from './CartWidget';
 import Logo from '../img/pedal-svgrepo-com.svg';
+import { Link } from 'react-router-dom';
 const NavBar = () => {
   return (
     // <header className='App-header'>
@@ -35,43 +36,40 @@ const NavBar = () => {
      
      <nav className="navbar navbar-expand-lg navbar-light Header">
        <div className="container-fluid Header-content">
-         <a className=" Header-brand" href="#"><span>Pedal</span>
-           Sh<img src={Logo} alt='logo'width={25} height={25}></img>p
-         </a>
+         <Link to="/" className=" Header-brand"><span>Pedal</span>
+           Sh<img src={Logo} alt='logo'width={25} height={25}></img>p</Link>
          <button className="navbar-toggler"  type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
            <span className="navbar-toggler-icon"></span>
          </button>
          <div className="collapse navbar-collapse" id="navbarNavDropdown">
            <ul className="navbar-nav Header-ul ">
              <li className="nav-item">
-               <a className="Header-options" aria-current="page" href="#">Home</a>
+               <Link to='/' className="Header-options">Home</Link>
              </li>
              <li className="nav-item">
-               <a className="Header-options" href="#">Quiénes somos</a>
+               <Link to='/' className="Header-options" >Quiénes somos</Link>
+               {/* <a className="Header-options" href="#">Quiénes somos</a> */}
              </li>
              <li className="nav-item">
-               <a className="Header-options" href="#">Contacto</a>
+               <Link to='/' className="Header-options">Contacto</Link>
+               {/* <a className="Header-options" href="#">Contacto</a> */}
              </li>
              <li className="nav-item dropdown">
                <a className="Header-options dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                Pedales
                </a>
-               <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                 <li><a className="dropdown-item" href="#">Distorsiones</a></li>
-                 <li><a className="dropdown-item" href="#">Modulaciones</a></li>
-                 <li><a className="dropdown-item" href="#">Delays</a></li>
-                 <li><a className="dropdown-item" href="#">Reverbs</a></li>
-                 <li><a className="dropdown-item" href="#">EQs</a></li>
-                 <li><a className="dropdown-item" href="#">Compresores</a></li>
-                 <li><a className="dropdown-item" href="#">Multiefectos</a></li>
+               <ul className="dropdown-menu subMenuOptions" aria-labelledby="navbarDropdownMenuLink">
+                 <li><Link to='/category/1' className='Links'>Distorsiones</Link></li>
+                 <li><Link to='/category/2'  className='Links'>Modulaciones</Link></li>
+                 <li><Link to='/category/3'  className='Links'>Delays</Link></li>
                </ul>
              </li>
                   <div className="Header-user">
                     <li className="nav-item">
-                      <a className="Header-options" href="#">Register</a>
+                      <a className="Header-options" href="#">Registrarse</a>
                     </li>
                     <li className="nav-item">
-                      <a className="Header-options" href="#">Sign In</a>
+                      <a className="Header-options" href="#">Iniciar sesión</a>
                     </li>
                   </div>
            </ul>
