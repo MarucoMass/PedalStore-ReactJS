@@ -8,7 +8,7 @@ const ItemDetail = ( {item} ) => {
     return(
         <>
         { item && item.img ?
-                <div key={item.id} className="ItemDetail-contain">
+                <div className="ItemDetail-contain">
                             <div className="ItemDetail-img"><img src={item.img} alt="imágen del producto"></img></div>
                             <div className="ItemDetail-text">
                                 <h3>{item.title}</h3>

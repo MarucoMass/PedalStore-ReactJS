@@ -38,15 +38,15 @@ const ItemListContainer = () => {
     // useEffect(() => {
     //     getProducts()
     //     if (idCategory === undefined) {
-    //         getItem()
+    //         getProducts()
     //             .then(result => setProducts(result))
     //             .catch(err => console.log(err))  
     //     } else {
-    //         getItem()
+    //         getProducts()
     //             .then(result => setProducts(result.filter(el => el.categoryId === parseInt(idCategory))))
     //             .catch(err => console.log(err))  
     //             }
-            // ESTO NO VA
+    //         // ESTO NO VA
     //     // .then(function(products) {
 
     //     //     setProducts(products);
@@ -67,7 +67,8 @@ const ItemListContainer = () => {
                                     <div className='loadBox'>
                                         <div className='loadCharge'></div>
                                     </div>
-                                </div>}
+                                </div>
+            }
         </div>
     );
 }

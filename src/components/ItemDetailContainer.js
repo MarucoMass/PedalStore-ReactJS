@@ -27,7 +27,7 @@ const ItemDetailContainer = () => {
     //             .then(result => setProducts(result.find(el => el.id === parseInt(idItem))))
     //             .catch(err => console.log(err))
 
-                // ESTO NO VA
+    //             // ESTO NO VA
     //         // .then(function(products) {
             
     //             //     setProducts(products);
