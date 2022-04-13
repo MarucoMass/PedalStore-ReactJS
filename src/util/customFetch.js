@@ -1,6 +1,6 @@
 
 let validation = true;
-const getItem = ( data ) => {
+const customFetch = ( data ) => {
         return new Promise((resolve, reject) => {
             if (validation) {
                 setTimeout(() => {
@@ -12,4 +12,4 @@ const getItem = ( data ) => {
         })
     }
 
-export default getItem;
+export default customFetch;

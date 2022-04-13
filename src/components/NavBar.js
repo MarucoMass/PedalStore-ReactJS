@@ -37,7 +37,7 @@ const NavBar = () => {
      <nav className="navbar navbar-expand-lg navbar-light Header">
        <div className="container-fluid Header-content">
          <Link to="/" className=" Header-brand"><span>Pedal</span>
-           Sh<img src={Logo} alt='logo'width={25} height={25}></img>p</Link>
+           St<img src={Logo} alt='logo'width={25} height={25}></img>re</Link>
          <button className="navbar-toggler"  type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
            <span className="navbar-toggler-icon"></span>
          </button>

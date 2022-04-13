@@ -1,4 +1,4 @@
-import getItem from '../util/getItem';
+import customFetch from '../util/customFetch';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemDetail from './ItemDetail.js';
@@ -14,7 +14,7 @@ const ItemDetailContainer = () => {
     
     // FORMA DE HACERLO QUE VIMOS EN CLASE
     useEffect(() => {
-        getItem( dataProducts.find(el => el.id === parseInt(idItem)) )
+        customFetch( dataProducts.find(el => el.id === parseInt(idItem)) )
         .then(result => setProducts(result))
         // .then(result => console.log(result))
         .catch(err => console.log(err))
@@ -46,7 +46,7 @@ const ItemDetailContainer = () => {
 
     return(
         <div className='ItemDetailContainer-Box'>
-            <ItemDetail item={products} />
+            <ItemDetail item={products} key={products.id}/>
         </div>
         
     );

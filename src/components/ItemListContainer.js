@@ -1,5 +1,5 @@
 import React from 'react';
-import getItem from '../util/getItem';
+import customFetch from '../util/customFetch';
 import ItemList from './ItemList';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
@@ -15,11 +15,11 @@ const ItemListContainer = () => {
     // FORMA DE HACERLO COMO VIMOS EN CLASE
     useEffect(() => {
         if (idCategory === undefined) {
-            getItem( dataProducts )
+             customFetch( dataProducts )
             .then(result => setProducts(result))
             .catch(err => console.log(err))  
         } else {
-            getItem( dataProducts.filter(el => el.categoryId === parseInt(idCategory)) )
+             customFetch( dataProducts.filter(el => el.categoryId === parseInt(idCategory)) )
             .then(result => setProducts(result))
             .catch(err => console.log(err))  
         }
@@ -58,16 +58,14 @@ const ItemListContainer = () => {
     return(
         <div className='ItemListContainer-Box'>
         {/* <ItemList products={products} /> */}
-            { products.length > 0 ? 
-                
-                <ItemList products={products} /> 
-
-                                : <div className='loadContain'>
-                                    <p>Cargando productos...</p>    
-                                    <div className='loadBox'>
-                                        <div className='loadCharge'></div>
-                                    </div>
-                                </div>
+            { products.length > 0 
+                ? <ItemList products={products} /> 
+                : <div className='loadContain'>
+                    <p>Cargando productos...</p>    
+                    <div className='loadBox'>
+                        <div className='loadCharge'></div>
+                    </div>
+                </div>
             }
         </div>
     );
