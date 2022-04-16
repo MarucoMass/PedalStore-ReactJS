@@ -32,7 +32,7 @@ const NavBar = () => {
     //         <div className='navBurguer'><div className='burguer'></div></div>
     //         <CartWidget />
     // </header> 
-    <>
+    // <>
      
      <nav className="navbar navbar-expand-lg navbar-light Header">
        <div className="container-fluid Header-content">
@@ -77,7 +77,7 @@ const NavBar = () => {
            <CartWidget />
        </div>
      </nav>
-    </>
+    // </>
   );
 }
 

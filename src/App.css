@@ -342,9 +342,9 @@ bottom: 7px;
 /* Item Count */
 .ItemCountBox{
   display: flex;
-  align-items: center;
-  justify-content: space-around;
   flex-direction: column;
+  align-items: center;
+  /* justify-content: space-around; */
   width: 220px;
   margin: 10px auto;
 }
@@ -363,6 +363,7 @@ bottom: 7px;
   width: 40px;
   font-size: 1.2rem;
   font-weight: 700;
+  transition: all 0.5s ease;
 }
 .ItemCountBtns-decrement{
   border: 2px solid rgb(209, 9, 9);;
@@ -373,18 +374,18 @@ bottom: 7px;
   border: 2px solid white;
   color: white;
   background-color:  rgb(209, 9, 9);;
-  transition: 0.3s;
+  /* transition: 0.3s; */
 }
 .ItemCountBtns-increment{
   border: 2px solid green;
   color: green;
-  transition: 0.3s;
+  /* transition: 0.3s; */
 }
 .ItemCountBtns-increment:hover{
   border: 2px solid white;
   color: white;
   background-color: green;
-  transition: 0.3s;
+  /* transition: 0.3s; */
 }
 .ItemCountBox p{
   font-size: calc(10px + 2vmin);
@@ -399,11 +400,11 @@ bottom: 7px;
   border: 2px solid rgb(6, 6, 224);
   color: white;
   font-weight: 600;
-  transition: 0.3s;
+  /* transition: 0.3s; */
 }.ItemCount-Add:hover{
   color: white;
   background-color: rgb(6, 6, 224);
-  transition: 0.3s;
+  /* transition: 0.3s; */
 }
 /* Fin ItemCount */
 
@@ -518,7 +519,7 @@ bottom: 7px;
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  padding: 10px;
+  margin: 15px 0;
   animation: moveUp 0.3s linear 0s 1 normal none;
 }
 .ItemDetail-img{
@@ -531,11 +532,12 @@ bottom: 7px;
 }
 .ItemDetail-text{
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
-  /* padding: 0 5px; */
+  padding: 0 10px;
 }
 .ItemDetail-text h3{
   font-size: calc(10px + 2vmin);
@@ -548,6 +550,19 @@ bottom: 7px;
 .ItemDetail-text p:nth-child(3){
   font-size: calc(10px + .8vmin);
   color: rgba(0, 0, 0, 0.6);
+}
+/* Checkout */
+.btnCheck{
+  background-color: transparent;
+  padding: 5px 10px;
+  font-weight: 900;
+  color: rgb(209, 9, 9);
+  border: 3px solid rgb(209, 9, 9);
+  margin: 10px auto;
+  transition: 0.5s ease;
+}.btnCheck:hover{
+  background-color: rgb(209, 9, 9);
+  color: white;
 }
 /* Fin ItemDetail */
 

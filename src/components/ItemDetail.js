@@ -1,8 +1,13 @@
+import Checkout from "./Checkout";
 import ItemCount from "./ItemCount";
+import { useState } from "react";
 const ItemDetail = ( {item} ) => {
+
+    const [itemCount, setItemCount] = useState(0);
 
     function onAddItem(ItemCount){
         alert(`Lleva ${ItemCount} ${item.title}`);
+        setItemCount(ItemCount);
     }
       
     return(
@@ -15,7 +20,13 @@ const ItemDetail = ( {item} ) => {
                                     <p>Precio: ${item.price}</p>
                                     <p>Stock: {item.stock}</p>
                                     <p>{item.description}</p>
-                                    <ItemCount stock={item.stock} initial={0} onAdd={onAddItem}/>
+                                    {/* <ItemCount stock={item.stock} initial={0} onAdd={onAddItem}/> */}
+                                    {/* <Checkout /> */}
+                                     {
+                                        itemCount === 0
+                                        ? <ItemCount stock={item.stock} initial={1} onAdd={onAddItem}/>
+                                        : <Checkout />
+                                    }
                                 </div>
                     </div>
             :           <div className='loadContain'>
