@@ -1,7 +1,10 @@
 import Cart from '../img/cart.svg';
+import { useContext } from 'react';
+import { CartContext } from './CartContext';
 const CartWidget = () => {
+const test = useContext(CartContext);
+
     return(
-        <>
             <div className='CartWidget-Box'>
                 {/* <span>Register</span>
                 <span>Sign In</span> */}
@@ -10,8 +13,6 @@ const CartWidget = () => {
                 <div className='number'>7</div>
             </div>
             </div>
-      
-        </>
       );
 }
 

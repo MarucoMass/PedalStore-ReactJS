@@ -19,7 +19,7 @@ function ItemCount ({stock, initial, onAdd})  {
         } 
     }
 
-    function addToCart () {
+    function addToCount () {
         onAdd(count)
     }
     
@@ -31,7 +31,7 @@ function ItemCount ({stock, initial, onAdd})  {
                 <p>{count}</p>
                 <button className="ItemCountBtns-increment" onClick={increment}>+</button>
             </div>
-            <button className="ItemCount-Add" onClick={addToCart}>Agregar al carrito</button>
+            <button className="ItemCount-Add" onClick={addToCount}>Agregar al carrito</button>
         </div>
         </>
     );
