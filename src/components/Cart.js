@@ -4,16 +4,16 @@ import { CartContext } from './CartContext';
 // import ItemCount from './ItemCount';
 
 const Cart = () => {
-    const test = useContext(CartContext);
+    const cart = useContext(CartContext);
 
     return(
     <div className="cartContain">
         <div className="cartTitle"><h1>Mi carrito</h1></div>
 
-        {test.cartList.length > 0
+        {cart.cartList.length > 0
         ? <div className='cartBtns'> 
             <Link to='/'><button className='cartKeepShop'>Seguir comprando</button></Link>
-            <button className='cartDeleteAll' onClick={test.deleteAll}>Borrar todos los productos</button>
+            <button className='cartDeleteAll' onClick={cart.deleteAll}>Borrar todos los productos</button>
           </div>
         : <>
             <p>No hay productos</p>
@@ -21,8 +21,8 @@ const Cart = () => {
           </>
         }  
       
-        {test.cartList.length > 0 &&
-          test.cartList.map(item => 
+        {cart.cartList.length > 0 &&
+          cart.cartList.map(item => 
             <div className="cartBox" key={item.idItem}>
                 <div className="cartImg">
                     <img src={item.imgItem} alt="Imágen del producto"></img>
@@ -34,7 +34,7 @@ const Cart = () => {
                     {/* <p>Cantidad: {item.qtyItem}</p> */}
                     <p>Subtotal: $ {item.priceItem * item.qtyItem}</p>
                     {/* <button onClick={() => test.deleteAmount(item.idItem)}>Eliminar un producto</button> */}
-                    <button onClick={() => test.deleteItem(item.idItem)}>Eliminar producto</button>
+                    <button onClick={() => cart.deleteItem(item.idItem)}>Eliminar producto</button>
                 </div>
         
             </div>

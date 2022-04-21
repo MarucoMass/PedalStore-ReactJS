@@ -5,12 +5,12 @@ import { CartContext } from "./CartContext";
 const ItemDetail = ( {item} ) => {
 
     const [itemCount, setItemCount] = useState(0);
-    const test = useContext(CartContext);
+    const cart = useContext(CartContext);
 
     function onAddItem(qty){
         // alert(`Lleva ${qty} ${item.title}`);
         setItemCount(qty);
-        test.addItem(item, qty);
+        cart.addItem(item, qty);
     }
       
     return(

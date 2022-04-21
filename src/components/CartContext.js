@@ -34,17 +34,17 @@ const CartContextProvider = ({children}) => {
         setCartList([]);
     }
 
-    const deleteAmount = (item) => {
-        const findProduct = cartList.find(elem => elem.id === item.id)
-        console.log(findProduct.qtyItem)
-        if (findProduct){
-            findProduct.qtyItem--
-        } if (findProduct.qtyItem === 0){
-            findProduct.qtyItem = 1
-        };
-    }
+    // const deleteAmount = (item) => {
+    //     const findProduct = cartList.find(elem => elem.id === item.id)
+    //     console.log(findProduct.qtyItem)
+    //     if (findProduct){
+    //         findProduct.qtyItem--
+    //     } if (findProduct.qtyItem === 0){
+    //         findProduct.qtyItem = 1
+    //     };
+    // }
     return(
-        <CartContext.Provider value={{cartList, addItem, deleteItem, deleteAll, deleteAmount}}>
+        <CartContext.Provider value={{cartList, addItem, deleteItem, deleteAll}}>
             {children}
         </CartContext.Provider>
     );
