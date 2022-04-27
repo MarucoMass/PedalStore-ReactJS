@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from './CartContext';
-
+import FormatNumber from '../util/FormatNumber';
 const Cart = () => {
     const cart = useContext(CartContext);
 
@@ -33,9 +33,8 @@ const Cart = () => {
                   
                   <div className="cartText">
                       <h2>{item.titleItem}</h2>
-                      <p> $ {item.priceItem} x {item.qtyItem} item/s</p>
-                      {/* <p>Total: $ {cart.calcItem(item.idItem)}</p> */}
-                      <p>Total: $ {cart.calcItem(item.priceItem, item.qtyItem)}</p>
+                      <p> ${item.priceItem} x {item.qtyItem} item/s</p>
+                      <p>Total: <FormatNumber number={cart.calcItem(item.priceItem, item.qtyItem)}/></p>
                       {/* <button onClick={() => test.deleteAmount(item.idItem)}>Eliminar un producto</button> */}
                       <button onClick={() => cart.deleteItem(item.idItem)}>Eliminar producto</button>
                   </div>
@@ -50,10 +49,10 @@ const Cart = () => {
           cart.cartList.length > 0 &&
           <div className='cartResume'>
             <h3>Detalle</h3>
-              <p>Subtotal: $ {cart.calcSubTotal()}</p>
-              <p>IVA 21%: + $ {cart.calcTax()}</p>
+              <p>Subtotal: <FormatNumber number={cart.calcSubTotal()}/> </p>
+              <p>IVA 21%: + <FormatNumber number={cart.calcTax()}/></p>
               <hr></hr>
-              <p>Total: $ {cart.calcTotal()}</p>
+              <p>Total: <FormatNumber number={cart.calcTotal()}/></p>
               <button>Finalizar compra</button>
             </div>
         }

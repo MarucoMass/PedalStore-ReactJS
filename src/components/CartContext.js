@@ -77,14 +77,14 @@ const CartContextProvider = ({children}) => {
         return qtys.reduce(((previousValue, currentValue) => previousValue + currentValue), 0);
     }
 
-    // const deleteAmount = (item) => {
+    // const deleteAmount = (item, qty) => {
     //     const findProduct = cartList.find(elem => elem.id === item.id)
-    //     console.log(findProduct.qtyItem)
+
     //     if (findProduct){
     //         findProduct.qtyItem--
-    //         calcSubTotal();
-    //         calcImpuesto();
-    //         calcTotal();
+    //         // calcSubTotal();
+    //         // calcImpuesto();
+    //         // calcTotal();
     //     } if (findProduct.qtyItem === 0){
     //         findProduct.qtyItem = 1
     //     };

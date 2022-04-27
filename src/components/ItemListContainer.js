@@ -1,12 +1,11 @@
 import React from 'react';
-import customFetch from '../util/customFetch';
+// import customFetch from '../util/customFetch';
 import ItemList from './ItemList';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 // import { getProducts } from '../util/dataProducts.js';
-const {dataProducts} = require('../util/dataProducts');
-
-
+// const {dataProducts} = require('../util/dataProducts');
+import { fetchFireBase } from '../util/firestoreFetch';
 const ItemListContainer = () => {
 
     const [products, setProducts] = useState([]);
@@ -14,16 +13,30 @@ const ItemListContainer = () => {
 
     // FORMA DE HACERLO COMO VIMOS EN CLASE
     useEffect(() => {
-        if (idCategory === undefined) {
-             customFetch( dataProducts )
-            .then(result => setProducts(result))
-            .catch(err => console.log(err))  
-        } else {
-             customFetch( dataProducts.filter(el => el.categoryId === parseInt(idCategory)) )
-            .then(result => setProducts(result))
-            .catch(err => console.log(err))  
-        }
+        
+        fetchFireBase(idCategory)
+        .then(result => setProducts(result))
+        .catch(error => console.log(error))
+       
     }, [idCategory])
+
+    useEffect(() => {
+        return (() => {
+            setProducts([]);
+        })
+    }, []);
+
+    // useEffect(() => {
+    //     if (idCategory === undefined) {
+    //          customFetch( dataProducts )
+    //         .then(result => setProducts(result))
+    //         .catch(err => console.log(err))  
+    //     } else {
+    //          customFetch( dataProducts.filter(el => el.categoryId === parseInt(idCategory)) )
+    //         .then(result => setProducts(result))
+    //         .catch(err => console.log(err))  
+    //     }
+    // }, [idCategory])
 
     // FORMA DE HACERLO CON ASYNC AWAIT
     // useEffect(() => {

@@ -1,9 +1,10 @@
-import customFetch from '../util/customFetch';
+// import customFetch from '../util/customFetch';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemDetail from './ItemDetail.js';
-const {dataProducts} = require('../util/dataProducts');
+// const {dataProducts} = require('../util/dataProducts');
 // import { getProducts } from '../util/dataProducts.js';
+import { fetchSingleFireBase } from '../util/firestoreFetch.js';
 
 
 const ItemDetailContainer = () => {
@@ -12,13 +13,21 @@ const ItemDetailContainer = () => {
     const { idItem } = useParams();
     
     
-    // FORMA DE HACERLO QUE VIMOS EN CLASE
     useEffect(() => {
-        customFetch( dataProducts.find(el => el.id === parseInt(idItem)) )
-        .then(result => setProducts(result))
-        // .then(result => console.log(result))
-        .catch(err => console.log(err))
+
+        fetchSingleFireBase(idItem)
+            .then(result => setProducts(result))
+            .catch(error => console(error))
+            
     }, [])
+
+    // FORMA DE HACERLO QUE VIMOS EN CLASE
+    // useEffect(() => {
+    //     customFetch( dataProducts.find(el => el.id === parseInt(idItem)) )
+    //     .then(result => setProducts(result))
+    //     // .then(result => console.log(result))
+    //     .catch(err => console.log(err))
+    // }, [])
 
     
     // FORMA DE HACERLO CON THEN LLAMANDO EL PROMISE DIRECTAMENTE DESDE EL JS DE PRODUCTOS

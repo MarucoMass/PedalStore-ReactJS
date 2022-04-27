@@ -59,9 +59,9 @@ const NavBar = () => {
                Pedales
                </a>
                <ul className="dropdown-menu subMenuOptions" aria-labelledby="navbarDropdownMenuLink">
-                 <li><Link to='/category/1' className='Links'>Distorsiones</Link></li>
-                 <li><Link to='/category/2'  className='Links'>Modulaciones</Link></li>
-                 <li><Link to='/category/3'  className='Links'>Delays</Link></li>
+                 <li><Link to='/category/od-ds' className='Links'>OD/DS</Link></li>
+                 <li><Link to='/category/modulation'  className='Links'>Modulaciones</Link></li>
+                 <li><Link to='/category/delay'  className='Links'>Delays</Link></li>
                </ul>
              </li>
                   <div className="Header-user">

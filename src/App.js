@@ -3,6 +3,7 @@ import * as bootstrap from 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import CartContextProvider from './components/CartContext';
+import Home from './components/Home';
 import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import Cart  from './components/Cart';
@@ -15,7 +16,7 @@ const App = () => {
     <BrowserRouter>
     <NavBar />
       <Routes>
-          <Route path='/' element={<ItemListContainer />} />
+          <Route path='/' element={<Home />} />
           <Route path='/category/:idCategory' element={<ItemListContainer />} />
           <Route path='/item/:idItem' element={<ItemDetailContainer />} />
           <Route path='/cart' element={<Cart />} />
