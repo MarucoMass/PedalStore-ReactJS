@@ -6,8 +6,6 @@ const cart = useContext(CartContext);
 
     return(
             <div className='CartWidget-Box'>
-                {/* <span>Register</span>
-                <span>Sign In</span> */}
             <div className='img-Box'>
                 <img src={Cart} alt='cart' className='carrito'></img>
                 {
