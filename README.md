@@ -22,7 +22,7 @@ Formulario para enviar consultas (por el momento no es funcional).
 En esta vista se muestran los productos seleccionados por el usuario para ser adquiridos.
 
 ## Detalles de producto
-Haciendo click en el boton "+ Info" de cada producto accedemos a la vista con todos las especificaciones de ese producto particular.
+Haciendo click en el botón "+ Info" de cada producto accedemos a la vista con todos las especificaciones de ese producto particular.
 
 ## Instalacion
 - Clonar el repositorio con el comand git clone (url del gh del proyecto).
