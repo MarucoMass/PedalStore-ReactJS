@@ -19,6 +19,9 @@ En cada vista se muestran solo los productos correspondientes a la categoría se
 ### Contacto
 Formulario para enviar consultas (por el momento no es funcional).
 
+### Registrarse e Iniciar sesión
+Aún sin funcionalidad.
+
 ### Cart
 En esta vista se muestran los productos seleccionados por el usuario para ser adquiridos.
 
