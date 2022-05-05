@@ -29,7 +29,7 @@ En esta vista se muestran los productos seleccionados por el usuario para ser ad
 ### Detalles de producto
 Haciendo click en el botón "+ Info" de cada producto accedemos a la vista con todos las especificaciones de ese producto particular.
 
-## Instalacion
+## Instalación
 - Clonar el repositorio con el comand git clone (url del gh del proyecto).
 - En el directorio raiz del proyecto correr el comando npm install para instalar todas las dependencias del proyecto.
 - Usar npm start para correr la app y verla en el navegador. Se abrirá http://localhost:3000. La página se recargará cada vez que se haga un cambio. Pueden visualizarse los errores por consola.
