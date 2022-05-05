@@ -28,7 +28,7 @@ Haciendo click en el boton "+Info" de cada producto accedemos a la vista con tod
 - React Router Dom para la navegación.
 - Sweetalert2 
 
-### Autor: Mario Massonnat @MarucoMass
+### Autor: Mario Massonnat 
 
 ### 2022 - Curso de ReactJS en CoderHouse
 
