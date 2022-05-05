@@ -43,7 +43,7 @@ Haciendo click en el botón "+ Info" de cada producto accedemos a la vista con t
 - Sweetalert2. 
 - Firebase.
 
-### Autor: Mario Massonnat - MarucoMass[https://github.com/MarucoMass]
+### Autor: Mario Massonnat - [MarucoMass](https://github.com/MarucoMass)
 
 ### 2022 - Curso de ReactJS en CoderHouse
 
