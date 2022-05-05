@@ -4,13 +4,19 @@ PedalStore es un e-commerce de pedales de guitarra eléctrica.
 
 El sitio es una SPA (Single Page Application).
 
-## Home
-En esta vista se encuentran todos los productos de la tienda. (Link al home en el logo)
-
 ## Menu de Navegación
 - Home
-- Categorías (En cada vista se muestran solo los productos correspondientes a la categoría seleccionada).
+- Categorías 
 - Contacto
+
+## Home
+En esta vista se encuentran todos los productos de la tienda (Link al home en el logo). 
+
+## Categorías
+En cada vista se muestran solo los productos correspondientes a la categoría seleccionada.
+
+## Contacto
+Formulario para enviar consultas (por el momento no es funcional).
 
 ## Cart
 En esta vista se mostraran los productos seleccionados por el usuario para ser adquiridos.
