@@ -8,6 +8,8 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 import Cart  from './components/Cart';
 import NavBar from './components/NavBar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Footer from './components/Footer';
+import Contact from './components/Contact';
 
 const App = () => {
   return (
@@ -19,9 +21,11 @@ const App = () => {
           <Route path='/category/:idCategory' element={<ItemListContainer />} />
           <Route path='/item/:idItem' element={<ItemDetailContainer />} />
           <Route path='/cart' element={<Cart />} />
+          <Route path='/contact' element={<Contact />} />
       </Routes>
+    <Footer />  
     </BrowserRouter>
-  // </CartContextProvider>   
+  </CartContextProvider>   
 
   );
 }

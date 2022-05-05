@@ -23,7 +23,17 @@ const ItemListContainer = () => {
     }, []);
  
     return(
-        <div className='ItemListContainer-Box'>
+        <>
+        {/* <div className="Home Contenedor">
+            <div className="HomeTitle">
+            <h1>Bienvenidos<br/> a PedalStore, <br/>la mejor tienda<br/> virtual de<br/> pedales de<br/> guitarra.</h1>
+            </div>
+            <div className="Home-paragraph">
+                <p>A continuación te mostraremos un listado con todos los productos en stock.<br/> Si deseas puedes buscar los pedales por categoría.</p>
+            </div>
+        </div>
+      */}
+        <div className='ItemListContainer-Box Contenedor'>
             { products.length > 0 
                 ? <ItemList products={products} /> 
                 : <div className='loadContain'>
@@ -34,6 +44,7 @@ const ItemListContainer = () => {
                 </div>
             }
         </div>
+        </>
     );
 }
 

@@ -1,7 +1,18 @@
 import ItemListContainer from "./ItemListContainer"
 const Home = () => {
     return(
-       <ItemListContainer />
+        <>
+        <div className="Home Contenedor">
+            <div className="HomeTitle">
+            <h1>Bienvenidos<br/> a PedalStore, <br/>la mejor tienda<br/> virtual de<br/> pedales de<br/> guitarra.</h1>
+            </div>
+            <div className="Home-paragraph">
+                <p>A continuación te mostraremos un listado con todos los productos en stock.<br/> Si deseas puedes buscar los pedales por categoría.</p>
+            </div>
+        </div>
+        {/* <div className="franja"></div> */}
+            <ItemListContainer />
+        </>
     );
 }
 export default Home;
