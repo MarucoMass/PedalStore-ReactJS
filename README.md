@@ -1,6 +1,6 @@
 # PedalStore
 ## Proyecto para curso de ReactJS
-PedalStore es un e-commerce de pedales de guitarra eléctrica
+PedalStore es un e-commerce de pedales de guitarra eléctrica.
 
 El sitio es una SPA (Single Page Application).
 
@@ -28,7 +28,7 @@ Haciendo click en el boton "+Info" de cada producto accedemos a la vista con tod
 - React Router Dom para la navegación.
 - Sweetalert2 
 
-### Autor: Mario Massonnat
+### Autor: Mario Massonnat @MarucoMass
 
 ### 2022 - Curso de ReactJS en CoderHouse
 
