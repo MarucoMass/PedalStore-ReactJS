@@ -6,9 +6,9 @@ El sitio es una SPA (Single Page Application).
 
 ## Estructura:
 ### Menu de Navegación
-- Home
-- Categorías 
-- Contacto
+- Home.
+- Categorías.
+- Contacto.
 
 ### Home
 En esta vista se encuentran todos los productos de la tienda (Link al home en el logo). 
@@ -34,11 +34,13 @@ Haciendo click en el botón "+ Info" de cada producto accedemos a la vista con t
 - Usar npm start para correr la app y verla en el navegador. Se abrirá http://localhost:3000. La página se recargará cada vez que se haga un cambio. Pueden visualizarse los errores por consola.
 
 ## Dependencias y tecnologías
+- React.
+- Javascript.
 - Vanilla CSS para dar estilo al proyecto.
 - Bootstrap para la estructura del navbar.
 - React Router Dom para la navegación.
-- Sweetalert2 
-- Firebase
+- Sweetalert2. 
+- Firebase.
 
 ### Autor: Mario Massonnat 
 
