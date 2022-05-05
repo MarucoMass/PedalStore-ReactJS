@@ -23,10 +23,12 @@ Haciendo click en el boton "+Info" de cada producto accedemos a la vista con tod
 - En el directorio raiz del proyecto correr el comando npm install para instalar todas las dependencias del proyecto.
 - Usar npm start para correr la app y verla en el navegador. Se abrirá http://localhost:3000. La página se recargará cada vez que se haga un cambio. Pueden visualizarse los errores por consola.
 
-## Dependencias
-- Bootstrap para dar formato a la aplicación.
+## Dependencias y tecnologías
+- Vanilla CSS para dar estilo al proyecto.
+- Bootstrap para la estructura del navbar.
 - React Router Dom para la navegación.
 - Sweetalert2 
+- Firebase
 
 ### Autor: Mario Massonnat 
 
