@@ -2,10 +2,10 @@ import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from './CartContext';
 import FormatNumber from '../util/FormatNumber';
-import { doc, collection, setDoc, serverTimestamp, updateDoc, increment, addDoc } from "firebase/firestore";
+import { doc, collection, setDoc, serverTimestamp, updateDoc, increment } from "firebase/firestore";
 import db from '../util/firebaseConfig';
 import Swal from 'sweetalert2';
-import { async } from '@firebase/util';
+
 const Cart = () => {
     const cart = useContext(CartContext);
     

@@ -688,7 +688,6 @@ z-index: -1;
 }
 .contactBox h1{
   font-size: calc(10px + 8vmin);
-  /* width: 100%; */
   flex: 1;
   text-align: left;
   font-weight: 800;
@@ -705,7 +704,6 @@ z-index: -1;
 .btn{
   padding: 10px;
   margin: 10px 0;
-  /* border: 2px solid rgba(6, 6, 224, 0.3); */
   box-shadow:2px 2px 5px rgba(0, 0, 0, 0.5),
   -2px -2px 2px rgba(245, 245, 245, 0.2);
   cursor:auto;
@@ -735,21 +733,17 @@ z-index: -1;
   color: #0000;
   width: 100%;
   margin-top: 50px;
-  /* border-top: 1px solid rgba(0, 0, 0, 0.3); */
-  /* box-shadow: 0 0 25px rgba(0, 0, 0, 0.2); */
 }
 
 .footerContent {
   min-height: 15vh;
   max-width: 1200px;
-  /* flex-direction: column; */
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   margin: 0 auto;
   padding-top: 10px;
-  /* padding: 0 5px; */
 }
 
 .footerContent .redes {
@@ -758,7 +752,6 @@ z-index: -1;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* margin-bottom: 10px; */
 }
 .redesContent{
   display: flex;
@@ -776,15 +769,15 @@ z-index: -1;
   padding: 5px;
   position: relative;
   cursor: pointer;
+  transition: all .3s ease;
+}
+.redes_box:hover{
+  transform: scale(1.1);
 }
 .redes_box img {
   width: 100%;
   height: 100%;
-  transition: all .3s ease;
   position: relative;
-}
-.redes_box:hover img {
-  transform: scale(1.1);
 }
 .footerDark {
   width: 100%;
@@ -798,7 +791,7 @@ z-index: -1;
   transition: all .3s ease;
 }
 .redes_box:hover .footerDark {
-  transform: scale(1.2);
+  transform: scale(1.1);
   visibility: visible;
 }
 .footerTitle{
