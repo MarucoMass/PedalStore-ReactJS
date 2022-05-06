@@ -5,8 +5,6 @@ PedalStore es un e-commerce de pedales de guitarra eléctrica.
 El sitio es una SPA (Single Page Application).
 Cuenta con diseño responsivo para pc, tablet y móvil.
 
-![](./gif/2022-05-05 15-30-50_.gif)
-
 ## Estructura:
 ### Menu de Navegación
 - Home.
@@ -30,6 +28,9 @@ En esta vista se muestran los productos seleccionados por el usuario para ser ad
 
 ### Detalles de producto
 Haciendo click en el botón "+ Info" de cada producto accedemos a la vista con todos las especificaciones de ese producto particular.
+
+## Apariencia y funcionamiento de la App
+![](./gif/pedalstore.gif)
 
 ## Instalación
 - Clonar el repositorio con el comand git clone (url del gh del proyecto).
