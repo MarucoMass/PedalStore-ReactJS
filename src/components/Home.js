@@ -10,7 +10,6 @@ const Home = () => {
                 <p>A continuación te mostraremos un listado con todos los productos en stock.<br/> Si deseas puedes buscar los pedales por categoría.</p>
             </div>
         </div>
-        {/* <div className="franja"></div> */}
             <ItemListContainer />
         </>
     );

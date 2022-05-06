@@ -9,7 +9,14 @@
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
 }
-
+.Contenedor{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
 /* Bootstrap section */
 
 .Header{
@@ -168,24 +175,15 @@
 }
 /*Fin CartWidget */
 /* End Bootstrap section */
-.Contenedor{
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 40px 0;
-}
+
 /* Home */
 .Home{
   margin: 0px auto;
-  /* width: 100%; */
   max-width: 1000px;
   flex-direction: row;
   flex-wrap: wrap;
 }
 .HomeTitle{
-  /* max-width: 500px; */
   flex: 1;
 }
 .HomeTitle h1{
@@ -224,13 +222,6 @@ left: -30px;
 border: 8px solid black;
 z-index: -1;
 } 
-.franja{
-  width: 100%;
-  height: 40px;
-  background-color: black;
-  margin-top: 30px;
-  margin-bottom: 20px;
-}
 /* Fin Home */
 
 /* ItemListContainer */
