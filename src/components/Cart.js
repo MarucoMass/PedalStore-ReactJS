@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from './CartContext';
 import FormatNumber from '../util/FormatNumber';
@@ -8,16 +8,23 @@ import Swal from 'sweetalert2';
 
 const Cart = () => {
     const cart = useContext(CartContext);
+
+    // estado para el form
+    const [formValue, SetFormValue] = useState({});
+    // funcion para actualizar el estado
+    const handleChange = (e) => {
+        SetFormValue({
+            ...formValue,
+            [e.target.name]:e.target.value
+        });
+    }
     
+    // funcion para crear la orden
     const orderCreated = () => {
 
       // el esquema de la orden con los datos
         let order = {
-          buyer: {
-            name: "Mario Mass",
-            email: "mariomass@gmail.com",
-            phone: "123456789"
-          },
+          buyer: formValue,
           items: cart.cartList.map( item => ({
             id: item.idItem,
             title: item.titleItem,
@@ -26,7 +33,7 @@ const Cart = () => {
             total: cart.calcTotal(),
             date: serverTimestamp()
         };
-
+        
         // crear la coleccion de la orden en la bd
         const orderInFirestore = async () => {
           const sendOrder = doc(collection(db, "orders"));
@@ -37,7 +44,7 @@ const Cart = () => {
           orderInFirestore()
           .then(result => 
             Swal.fire({
-            title:' Orden creada. Gracias por su compra.',
+            title:`Orden creada. Gracias por su compra ${formValue.nombre}.`,
             text: 'ID de su orden' + ' ' + result.id,
             icon: 'success',
             backdrop: true
@@ -127,10 +134,41 @@ const Cart = () => {
               <p>IVA 21%: + <FormatNumber number={cart.calcTax()}/></p>
               <hr></hr>
               <p>Total: <FormatNumber number={cart.calcTotal()}/></p>
-              <button onClick={orderCreated}>Finalizar compra</button>
+              <hr></hr>
+              <form className="formDeContacto">
+                <h4>Completa con tus datos por favor</h4>
+                <input  type="text"
+                        id="nombre" 
+                        className="btn"
+                        placeholder="Tu nombre" 
+                        value={formValue.nombre} 
+                        onChange={handleChange}
+                        name="nombre" 
+                        />
+                <input type="email" 
+                       id="email" 
+                       className="btn"
+                       placeholder="Tu email"
+                       value={formValue.email} 
+                       onChange={handleChange}
+                       name="email"
+                      />
+                <input type="number" 
+                       id="phone" 
+                       className="btn"
+                       placeholder="Tu teléfono" 
+                       value={formValue.telefono} 
+                       onChange={handleChange}
+                       name="telefono" 
+                      />
+                  </form>
+                  {
+                  formValue.nombre && formValue.email && formValue.telefono
+                  ? <button onClick={orderCreated} >Finalizar compra</button>   
+                  : <button disabled>Finalizar compra</button> 
+                  }
             </div>
         }
-    
         </div>
         {/* fin cartcontent */}
     </div>
