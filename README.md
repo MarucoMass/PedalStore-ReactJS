@@ -18,7 +18,7 @@ En esta vista se encuentran todos los productos de la tienda (Link al home en el
 En cada vista se muestran solo los productos correspondientes a la categoría seleccionada.
 
 ### Contacto
-Formulario para enviar consultas. Su funciona actualmente simula el comportamiento de un formulario real.
+Formulario para enviar consultas. Su funcionamiento actualmente simula el comportamiento de un formulario real.
 
 ### Registrarse e Iniciar sesión
 Aún sin funcionalidad.
