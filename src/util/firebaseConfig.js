@@ -2,7 +2,7 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCRP53E_tCnM0xP0kK0K4GjKHm27_JPpqY",
+  apiKey: process.env.API_KEY,
   authDomain: "pedalstore-ecc86.firebaseapp.com",
   projectId: "pedalstore-ecc86",
   storageBucket: "pedalstore-ecc86.appspot.com",

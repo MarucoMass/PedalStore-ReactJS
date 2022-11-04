@@ -4,7 +4,7 @@ const dataProducts = [
         title: "Ibanez TubeScreamer TS-9",
         price: 20000,
         stock: 35,
-        categoryId: 1,
+        categoryId: "od-ds",
         category:{
             name: "OD-DS",
             id: 1
@@ -17,7 +17,7 @@ const dataProducts = [
         title: "Nux Brownie Core",
         price: 8000,
         stock: 25,
-        categoryId: 1,
+        categoryId: "od-ds",
         category:{
             name: "OD-DS",
             id: 1
@@ -30,7 +30,7 @@ const dataProducts = [
         title: "Mooer Green Mile",
         price: 10000,
         stock: 15,
-        categoryId: 1,
+        categoryId: "od-ds",
         category:{
             name: "OD-DS",
             id: 1
@@ -43,7 +43,7 @@ const dataProducts = [
         title: "Boss Distortion DS-1",
         price: 30000,
         stock: 25,
-        categoryId: 1,
+        categoryId: "od-ds",
         category:{
             name: "OD-DS",
             id: 1
@@ -56,7 +56,7 @@ const dataProducts = [
         title: "OCD Distortion V2",
         price: 30000,
         stock: 10,
-        categoryId: 1,
+        categoryId: "od-ds",
         category:{
             name: "OD-DS",
             id: 1
@@ -69,7 +69,7 @@ const dataProducts = [
         title: "Marshall Jackhammer JH-1",
         price: 21000,
         stock: 30,
-        categoryId: 1,
+        categoryId: "od-ds",
         category:{
             name: "OD-DS",
             id: 1
@@ -82,7 +82,7 @@ const dataProducts = [
         title: "Boss Super Chorus CH-1",
         price: 19000,
         stock: 28,
-        categoryId: 2,
+        categoryId: "modulation",
         category:{
             name: "Modulaciones",
             id: 2
@@ -96,7 +96,7 @@ const dataProducts = [
         title: "Mooer Chorus Ensemble King Mch1",
         price: 11000,
         stock: 33,
-        categoryId: 2,
+        categoryId: "modulation",
         category:{
             name: "Modulaciones",
             id: 2
@@ -110,7 +110,7 @@ const dataProducts = [
         title: "Tc Electronic Corona Chorus",
         price: 37000,
         stock: 37,
-        categoryId: 2,
+        categoryId: "modulation",
         category:{
             name: "Modulaciones",
             id: 2
@@ -124,7 +124,7 @@ const dataProducts = [
         title: "Boss DD-7 Digital Delay",
         price: 42000,
         stock: 18,
-        categoryId: 3,
+        categoryId: "delay",
         category:{
             name: "Delays",
             id: 3
@@ -137,7 +137,7 @@ const dataProducts = [
         title: "Mooer Reecho Delay",
         price: 12500,
         stock: 24,
-        categoryId: 3,
+        categoryId: "delay",
         category:{
             name: "Delays",
             id: 3
@@ -150,7 +150,7 @@ const dataProducts = [
         title: "Mxr M-169 Carbon Copy Analog Delay",
         price: 36500,
         stock: 12,
-        categoryId: 3,
+        categoryId: "delay",
         category:{
             name: "Delays",
             id: 3
@@ -161,9 +161,7 @@ const dataProducts = [
     }
 ]
 
-module.exports = {
-    dataProducts,
-}
+export default dataProducts;
 // export const getProducts = () => {
 //     return new Promise((resolve, reject) => {
 //         setTimeout(() => {

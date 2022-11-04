@@ -124,13 +124,13 @@ const Cart = () => {
               </div>
                             )
         }
-            </div>/
+            </div>
             {/* fin cartboxcontain */}
         {
           cart.cartList.length > 0 &&
           <div className='cartResume'>
             <h3>Detalle</h3>
-              <p>Subtotal: <FormatNumber number={cart.calcSubTotal()}/> </p>
+              <p>Subtotal: <FormatNumber number={cart.calcSubTotal()}/></p>
               <p>IVA 21%: + <FormatNumber number={cart.calcTax()}/></p>
               <hr></hr>
               <p>Total: <FormatNumber number={cart.calcTotal()}/></p>
