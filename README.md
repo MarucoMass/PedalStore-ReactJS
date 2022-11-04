@@ -18,7 +18,7 @@ En esta vista se encuentran todos los productos de la tienda (Link al home en el
 En cada vista se muestran solo los productos correspondientes a la categoría seleccionada.
 
 ### Contacto
-Formulario para enviar consultas (por el momento no es funcional).
+Formulario para enviar consultas. Su funcionamiento actualmente simula el comportamiento de un formulario real.
 
 ### Registrarse e Iniciar sesión
 Aún sin funcionalidad.
@@ -45,6 +45,9 @@ Haciendo click en el botón "+ Info" de cada producto accedemos a la vista con t
 - React Router Dom para la navegación.
 - Sweetalert2. 
 - Firebase.
+
+### Deploy
+[Github Pages](https://marucomass.github.io/pedal-store-app/) (clickear en Home o cualquier otra opción para recargar el sitio. Github pages cuenta con un bug que no ejecuta bien el deploy en la primer carga)
 
 ### Autor: Mario Massonnat - [MarucoMass](https://github.com/MarucoMass)
 
