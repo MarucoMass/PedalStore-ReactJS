@@ -47,7 +47,7 @@ Haciendo click en el botón "+ Info" de cada producto accedemos a la vista con t
 - Firebase.
 
 ### Deploy
-[Github Pages](https://marucomass.github.io/pedal-store-app/) (clickear en Home o cualquier otra opción para recargar el sitio. Github pages cuenta con un bug que no ejecuta bien el deploy en la primer carga)
+https://mariomass-pedalstore.netlify.app/
 
 ### Autor: Mario Massonnat - [MarucoMass](https://github.com/MarucoMass)
 
