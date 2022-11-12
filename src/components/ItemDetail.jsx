@@ -1,7 +1,7 @@
 import Checkout from "./Checkout";
 import ItemCount from "./ItemCount";
 import { useContext, useState } from "react";
-import { CartContext } from "./CartContext";
+import { CartContext } from "../context/CartContext";
 import FormatNumber from "../util/FormatNumber";
 const ItemDetail = ( {item} ) => {
 

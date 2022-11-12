@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Swal from "sweetalert2";
 
-const Contact = () => {
+const Contact = ({send}) => {
 
     const [formName, SetFormName] = useState('');
 
@@ -48,7 +48,7 @@ const Contact = () => {
                       placeholder="Tu consulta" 
                       required 
                       name="consulta" />
-            <input type="submit" id="send" className="btnSend" placeholder="Enviar" />
+            <input type="submit" id="send" className="btnSend" placeholder="Enviar" onClick={send}/>
         </form>
     </div>
     );

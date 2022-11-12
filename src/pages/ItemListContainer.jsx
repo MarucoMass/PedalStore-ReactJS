@@ -1,5 +1,5 @@
 import React from 'react';
-import ItemList from './ItemList';
+import ItemList from '../components/ItemList';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchFireBase } from '../util/firestoreFetch';
@@ -12,21 +12,12 @@ const ItemListContainer = () => {
     const { idCategory } = useParams();
 
     useEffect(() => {
-        
+        // traigo la lista de productos
         fetchFireBase(idCategory)
         .then(result => setProducts(result))
         .catch(error => console.log(error))
        
     }, [idCategory])
-
-    // useEffect(() => {
-    //     customFetch(dataProducts.filter(item => {
-    //         if (idCategory === undefined) return item;
-    //         return item.categoryId === idCategory
-    //     }))
-    //         .then(result => setProducts(result))
-    //         .catch(err => console.log(err))
-    // }, [products]);
 
     useEffect(() => {
         return (() => {
@@ -34,8 +25,10 @@ const ItemListContainer = () => {
         })
     }, []);
  
+
+
     return(
-    
+
         <div className='ItemListContainer-Box Contenedor'>
             { products.length > 0 
                 ? <ItemList products={products} /> 
@@ -47,8 +40,9 @@ const ItemListContainer = () => {
                 </div>
             }
         </div>
-      
+ 
     );
 }
 
 export default ItemListContainer;
+

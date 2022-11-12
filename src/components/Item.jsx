@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, BrowserRouter } from "react-router-dom";
 import FormatNumber from "../util/FormatNumber";
 const Item = ({ id, img, title, price }) => {
 
@@ -9,7 +9,9 @@ const Item = ({ id, img, title, price }) => {
                 <div className="Item-BoxText">
                     <p className="Item-BoxText-title">{title}</p>
                     <p className="Item-BoxText-price">Precio: <FormatNumber number={price} /></p>
-                    <Link to={`/item/${id}`} className="Item-BoxText-info">+ Info</Link>
+                    <BrowserRouter>
+                        <Link to={`/item/${id}`} className="Item-BoxText-info">+ Info</Link>
+                    </BrowserRouter>
                 </div>
                 <div className="Item-Dark"></div>
             </div>
