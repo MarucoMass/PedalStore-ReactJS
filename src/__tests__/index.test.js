@@ -16,7 +16,7 @@ let title
 
     test('testing Home page title', () => {
         expect(title).toBeDefined()
-        expect(title).toHaveTextContent('guitarra'); /* busca si tiene esa palabra */
+        expect(title).toHaveTextContent('guitarra'); 
     })
 
 })
@@ -30,19 +30,19 @@ const mockHandler = jest.fn() /* funcion de prueba para testear el boton */
 
     beforeEach(() => {
         render(<Contact send={mockHandler}/>)
-        btn = screen.getByRole('button') /* busco al boton */
-        title = screen.getByRole('heading') /* busco al h1 */
+        btn = screen.getByRole('button') 
+        title = screen.getByRole('heading') 
     })
 
     test('testing Contact title', () => {
-        expect(title).toBeInTheDocument() /* para saber si existe el h1 en el form*/ 
-        expect(title).toHaveTextContent('Contáctate con nosotros') /* me fijo si contiene ese texto */
+        expect(title).toBeInTheDocument() 
+        expect(title).toHaveTextContent('Contáctate con nosotros') 
     })
 
     test('testing Contact button', () => {
-        expect(btn).toBeInTheDocument() /* para saber si existe el boton en el form*/ 
-        fireEvent.click(btn); /* disparo el click */
-        expect(mockHandler).toHaveBeenCalledTimes(1) /* Le pregunto si fue llamado al menos 1 vez */
+        expect(btn).toBeInTheDocument() 
+        fireEvent.click(btn); 
+        expect(mockHandler).toHaveBeenCalledTimes(1) 
     })
 })
 
@@ -57,10 +57,10 @@ let link;
     })
 
     test('testing Item img', () => {
-        expect(img).toBeInTheDocument() /* me fijo si existe la img */
+        expect(img).toBeInTheDocument() 
     })
     test('testing Item link', () => {
-        expect(link).toBeInTheDocument() /* me fijo si existe el link */
+        expect(link).toBeInTheDocument() 
     })
 })
 
@@ -70,7 +70,7 @@ let btnAdd;
 let btnIncrement;
 let btnDecrement;
 
-const mockHandler = jest.fn() /* funcion de prueba para testear el boton */
+const mockHandler = jest.fn() 
 
     beforeEach(() => {
         render(<ItemCount onAdd={mockHandler}/>)
