@@ -44,10 +44,9 @@ Haciendo click en el botón "+ Info" de cada producto accedemos a la vista con t
 - Bootstrap para la estructura del navbar.
 - React Router Dom para la navegación.
 - Sweetalert2. 
-- Firebase.
 
 ### Deploy
-https://mariomass-pedalstore.netlify.app/
+https://mariomass-pedal-store.netlify.app/
 
 ### Autor: Mario Massonnat - [MarucoMass](https://github.com/MarucoMass)
 
