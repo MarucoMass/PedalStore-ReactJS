@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import CartWidget from './CartWidget';
 import Logo from '../img/pedal-svgrepo-com.svg';
 import { NavLink, Link } from 'react-router-dom';
@@ -20,11 +21,11 @@ const NavBar = () => {
              <li className="nav-item dropdown">
                <a className="Header-options dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                Categorías
-               </a>
+              </a>
                <ul className="dropdown-menu subMenuOptions" aria-labelledby="navbarDropdownMenuLink">
-                 <li><NavLink to='/category/od-ds' className='Links'>OD/DS</NavLink></li>
-                 <li><NavLink to='/category/modulation'  className='Links'>Modulaciones</NavLink></li>
-                 <li><NavLink to='/category/delay'  className='Links'>Delays</NavLink></li>
+              <li><NavLink to='/category/1' className='Links'>OD/DS</NavLink></li>
+              <li><NavLink to='/category/2'  className='Links'>Modulaciones</NavLink></li>
+              <li><NavLink to='/category/3'  className='Links'>Delays</NavLink></li>
                </ul>
              </li>
              <li className="nav-item">

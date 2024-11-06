@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import * as bootstrap from 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';

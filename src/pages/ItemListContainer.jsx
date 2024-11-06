@@ -1,10 +1,11 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React from 'react';
 import ItemList from '../components/ItemList';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { fetchFireBase } from '../util/firestoreFetch';
-// import customFetch from '../util/customFetch';
-// import dataProducts from '../util/dataProducts';
+// import { fetchFireBase } from '../util/firestoreFetch';
+ import customFetch from '../util/customFetch';
+ import dataProducts from '../util/dataProducts';
 
 const ItemListContainer = () => {
 
@@ -12,12 +13,16 @@ const ItemListContainer = () => {
     const { idCategory } = useParams();
 
     useEffect(() => {
-        // traigo la lista de productos
-        fetchFireBase(idCategory)
-        .then(result => setProducts(result))
-        .catch(error => console.log(error))
-       
-    }, [idCategory])
+       if (idCategory === undefined) {
+        customFetch( dataProducts )
+          .then(result => setProducts(result))
+          .catch(err => console.log(err))  
+      } else {
+         customFetch( dataProducts.filter(el => el.categoryId === parseInt(idCategory)) )
+          .then(result => setProducts(result))
+          .catch(err => console.log(err))  
+      }
+    }, [idCategory]);
 
     useEffect(() => {
         return (() => {

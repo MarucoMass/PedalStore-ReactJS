@@ -2,6 +2,7 @@ import Facebook from '../img/facebook.svg';
 import Twitter from '../img/twitter.svg';
 import Instagram from '../img/instagram.svg';
 const Footer = () => {
+    const year = new Date().getFullYear();
     return(
         <div className="footer">
            <div className="footerContent">
@@ -14,7 +15,7 @@ const Footer = () => {
                         <div className="redes_box"><a href=""><img src={Instagram} alt="imagen de las redes"/></a><div className="footerDark"></div></div>
                     </div>
             </div>
-            <p>Sitio web sin fines de lucro.<br/>Copyright 2022 Mario Massonnat. All rights reserved.</p>     
+            <p>Sitio web sin fines de lucro.<br/>Copyright {year} Mario Massonnat. All rights reserved.</p>     
        </div>
     );
 }

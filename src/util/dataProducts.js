@@ -4,7 +4,7 @@ const dataProducts = [
         title: "Ibanez TubeScreamer TS-9",
         price: 20000,
         stock: 35,
-        categoryId: "od-ds",
+        categoryId: 1,
         category:{
             name: "OD-DS",
             id: 1
@@ -17,7 +17,7 @@ const dataProducts = [
         title: "Nux Brownie Core",
         price: 8000,
         stock: 25,
-        categoryId: "od-ds",
+        categoryId: 1,
         category:{
             name: "OD-DS",
             id: 1
@@ -30,7 +30,7 @@ const dataProducts = [
         title: "Mooer Green Mile",
         price: 10000,
         stock: 15,
-        categoryId: "od-ds",
+        categoryId: 1,
         category:{
             name: "OD-DS",
             id: 1
@@ -43,7 +43,7 @@ const dataProducts = [
         title: "Boss Distortion DS-1",
         price: 30000,
         stock: 25,
-        categoryId: "od-ds",
+        categoryId: 1,
         category:{
             name: "OD-DS",
             id: 1
@@ -56,7 +56,7 @@ const dataProducts = [
         title: "OCD Distortion V2",
         price: 30000,
         stock: 10,
-        categoryId: "od-ds",
+        categoryId: 1,
         category:{
             name: "OD-DS",
             id: 1
@@ -69,7 +69,7 @@ const dataProducts = [
         title: "Marshall Jackhammer JH-1",
         price: 21000,
         stock: 30,
-        categoryId: "od-ds",
+        categoryId: 1,
         category:{
             name: "OD-DS",
             id: 1
@@ -82,41 +82,38 @@ const dataProducts = [
         title: "Boss Super Chorus CH-1",
         price: 19000,
         stock: 28,
-        categoryId: "modulation",
+        categoryId: 2,
         category:{
             name: "Modulaciones",
             id: 2
         },
         description: "El pedal CH-1 Super Chorus ofrece un sonido de coro clásico limpio con agudos nítidos y un efecto estéreo único, variable entre los altavoces izquierdo y derecho.",
         img: "https://http2.mlstatic.com/D_NQ_NP_2X_958186-MLA45262295649_032021-F.webp"
-        // img: "https://www.compraensanjuan.com/fotos_articulos/1485348_1.jpg"
     },
     {
         id: 8,
         title: "Mooer Chorus Ensemble King Mch1",
         price: 11000,
         stock: 33,
-        categoryId: "modulation",
+        categoryId: 2,
         category:{
             name: "Modulaciones",
             id: 2
         },
         description: "El pedal Ensemble King produce un sonido de chorus analógico puro debido a la circuitería analógica completa dentro de su pequeña y exquisita unidad. La carcasa totalmente metálica cuenta con un verdadero interruptor de pedal de derivación, luz indicadora LED y entrada y salida monofónica de 1/4'.",
         img: "https://http2.mlstatic.com/D_NQ_NP_2X_654440-MLA27134825586_042018-F.webp"
-        // img: "https://http2.mlstatic.com/D_NQ_NP_786416-MLA25826137010_072017-O.jpg"
     },
     {
         id: 9,
         title: "Tc Electronic Corona Chorus",
         price: 37000,
         stock: 37,
-        categoryId: "modulation",
+        categoryId: 2,
         category:{
             name: "Modulaciones",
             id: 2
         },
         description: "Corona Chorus es tu pedal para todos tus trémulos y bondadosos atributos. Con dos configuraciones de chorus diferentes (el clásico pedal TC Electronic SCF de renombre mundial y un Tri-Chorus) y una configuración de TonePrint personalizada, Corona Chorus estará a tu lado sin importar la situación en que tu juego pueda llevarte. Corona Chorus cuenta con controles de velocidad, profundidad, color y nivel, diseño de bypass verdadero, tamaño reducido, puerta de acceso de batería de fácil acceso y está construido con componentes de la más alta calidad.",
-        // img: "https://http2.mlstatic.com/D_NQ_NP_2X_846148-MLA29842126382_042019-F.webp"
         img: "https://static3.tcdn.com.br/img/img_prod/304884/tc_electronic_corona_chorus_pedal_para_guitarra_12838_4_20190703171432.jpg"
     },
     {
@@ -124,7 +121,7 @@ const dataProducts = [
         title: "Boss DD-7 Digital Delay",
         price: 42000,
         stock: 18,
-        categoryId: "delay",
+        categoryId: 3,
         category:{
             name: "Delays",
             id: 3
@@ -137,7 +134,7 @@ const dataProducts = [
         title: "Mooer Reecho Delay",
         price: 12500,
         stock: 24,
-        categoryId: "delay",
+        categoryId: 3,
         category:{
             name: "Delays",
             id: 3
@@ -150,13 +147,12 @@ const dataProducts = [
         title: "Mxr M-169 Carbon Copy Analog Delay",
         price: 36500,
         stock: 12,
-        categoryId: "delay",
+        categoryId: 3,
         category:{
             name: "Delays",
             id: 3
         },
         description: "El pedal de MXR Carbon Copy delay análogo cuenta con una ruta de audio analógico por completo para lograr un rico y calido delay, sólo posible gracias a la vieja escuela de la tecnología. Este diseño cuenta con un increíble delay de 600 ms con modulación a través de un interruptor y un diseño simple de tres perilla que controla el tiempo de retardo, Mix (mezcla seco / húmedo), y Regen (repeticiones de retardo). Todo esto en uno el pedal del tamaño de un Phase 90.",
-        // img: "https://http2.mlstatic.com/D_NQ_NP_2X_973881-MLA31032823242_062019-F.webp"
         img: "http://www.fxdoctor.com/wp/wp-content/uploads/2020/10/mxr-carbon-copy.jpg"
     }
 ]

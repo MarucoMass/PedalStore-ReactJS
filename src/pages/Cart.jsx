@@ -1,9 +1,8 @@
+/* eslint-disable no-useless-concat */
 import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
 import FormatNumber from '../util/FormatNumber';
-import { doc, collection, setDoc, serverTimestamp, updateDoc, increment } from "firebase/firestore";
-import db from '../util/firebaseConfig';
 import Swal from 'sweetalert2';
 
 const Cart = () => {
@@ -23,6 +22,7 @@ const Cart = () => {
     const orderCreated = () => {
 
       // el esquema de la orden con los datos
+        // eslint-disable-next-line no-unused-vars
         let order = {
           buyer: formValue,
           items: cart.cartList.map( item => ({
@@ -31,34 +31,14 @@ const Cart = () => {
             price: item.priceItem
           })),
             total: cart.calcTotal(),
-            date: serverTimestamp()
+            // date: serverTimestamp()
         };
         
-        // crear la coleccion de la orden en la bd
-        const orderInFirestore = async () => {
-          const sendOrder = doc(collection(db, "orders"));
-          await setDoc(sendOrder, order);
-          return sendOrder;
-        }
-
-          orderInFirestore()
-          .then(result => 
-            Swal.fire({
-            title:`Orden creada. Gracias por su compra ${formValue.nombre}.`,
-            text: 'ID de su orden' + ' ' + result.id,
-            icon: 'success',
-            backdrop: true
-          }))
-          .catch(err => console.log(err))
-  
-          
-          // borrar el stock de la bd
-          cart.cartList.forEach(async item => {
-            const updateItem = doc(db, "products", item.idItem);
-            await updateDoc(updateItem, {
-              stock: increment(-item.qtyItem)
-            })
-          });
+        Swal.fire({
+              title:`Orden creada. Gracias por su compra ${formValue.nombre}.`,
+              icon: 'success',
+              backdrop: true
+             })
           
           cart.deleteAll();
     }
